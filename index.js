@@ -26,31 +26,31 @@ class Cryptopia {
     return rp(options)
   }
 
-  async GetCurrencies () {
+   GetCurrencies () {
     return this._public('GetCurrencies')
   }
 
-  async GetTradePairs () {
+   GetTradePairs () {
     return this._public('GetTradePairs')
   }
 
-  async GetMarkets (baseMarket, hours) {
+   GetMarkets (baseMarket, hours) {
     return this._public('GetMarkets', {baseMarket, hours})
   }
 
-  async GetMarket (market, hours) {
+   GetMarket (market, hours) {
     return this._public('GetMarket', {market, hours})
   }
 
-  async GetMarketHistory (market, hours) {
+   GetMarketHistory (market, hours) {
     return this._public('GetMarketHistory', {market, hours})
   }
 
-  async GetMarketOrders (market, orderCount) {
+   GetMarketOrders (market, orderCount) {
     return this._public('GetMarketOrders', {market, orderCount})
   }
 
-  async GetMarketOrderGroups (markets, orderCount) {
+   GetMarketOrderGroups (markets, orderCount) {
     return this._public('GetMarketOrderGroups', {markets, orderCount})
   }
 
@@ -76,42 +76,42 @@ class Cryptopia {
     return rp(options)
   }
 
-  async GetBalance (Currency) {
+   GetBalance (Currency) {
     return this._private('GetBalance', {Currency})
   }
 
-  async GetDepositAddress (Currency) {
+   GetDepositAddress (Currency) {
     return this._private('GetDepositAddress', {Currency})
   }
 
-  async GetOpenOrders (Market, TradePairId, Count) {
+   GetOpenOrders (Market, TradePairId, Count) {
     return this._private('GetOpenOrders', {Market, TradePairId, Count})
   }
-  async GetTradeHistory (Market, TradePairId, Count) {
+   GetTradeHistory (Market, TradePairId, Count) {
     return this._private('GetTradeHistory', {Market, TradePairId, Count})
   }
 
-  async GetTransactions (Type, Count) {
+   GetTransactions (Type, Count) {
     return this._private('GetTransactions', {Type, Count})
   }
 
-  async SubmitTrade (Market, TradePairId, Type, Rate, Amount) {
+   SubmitTrade (Market, TradePairId, Type, Rate, Amount) {
     return this._private('SubmitTrade', {Market, TradePairId, Type, Rate, Amount})
   }
 
-  async CancelTrade (Type, OrderId, TradePairId) {
+   CancelTrade (Type, OrderId, TradePairId) {
     return this._private('CancelTrade', {Type, OrderId, TradePairId})
   }
 
-  async SubmitTip (Currency, ActiveUsers, Amount) {
+   SubmitTip (Currency, ActiveUsers, Amount) {
     return this._private('SubmitTip', {Currency, ActiveUsers, Amount})
   }
 
-  async SubmitWithdraw (Currency, Address, PaymentId, Amount) {
+   SubmitWithdraw (Currency, Address, PaymentId, Amount) {
     return this._private('SubmitWithdraw', {Currency, Address, PaymentId, Amount})
   }
 
-  async SubmitTransfer (Currency, Username, Amount) {
+   SubmitTransfer (Currency, Username, Amount) {
     return this._private('SubmitTransfer', {Currency, Username, Amount})
   }
 }
