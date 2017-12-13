@@ -1,3 +1,4 @@
+"use strict";
 const rp = require('request-promise')
 const crypto = require('crypto')
 const nonce = require('nonce')()
